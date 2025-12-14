@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="result-body">
+
+<div class="library-card">
+  <div class="card-date" id="cardDate"></div>
+  <img id="cardPhoto" alt="Library Card Photo">
+  <div class="card-center">
+    <h3 id="cardName"></h3>
+    <p id="cardBirth"></p>
+    <p id="cardGender"></p>
+    <p id="cardNationality"></p>
+    <p id="cardNationalId"></p>
+    <p id="cardDegree"></p>
+  </div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Library.svg" alt="Library Icon" class="library-icon">
+  <div class="library-name">Municipal Library</div>
+</div>
+
+<script>
+  const data = JSON.parse(localStorage.getItem("libraryData"));
+
+  if (data) {
+    document.getElementById("cardName").textContent = data.firstName + " " + data.lastName;
+    document.getElementById("cardBirth").textContent = `Age: ${data.age}`;
+    document.getElementById("cardGender").textContent = "Gender: " + data.gender;
+    document.getElementById("cardNationality").textContent = "Nationality: " + data.nationality;
+    document.getElementById("cardNationalId").textContent = "National ID: " + data.nationalId;
+    document.getElementById("cardDegree").textContent = "Degree: " + data.degree;
+    document.getElementById("cardPhoto").src = data.photo;
+    document.getElementById("cardDate").textContent = "Issued: " + data.issueDate;
+  } else {
+    alert("No data found. Please fill out the form first.");
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
