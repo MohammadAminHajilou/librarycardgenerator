@@ -1,0 +1,76 @@
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 12px;
+  }
+
+  .form-card {
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .row input,
+  .row select {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .photo-box {
+    width: 100%;
+    height: 120px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  /* RESULT CARD */
+  .library-card {
+    width: 100%;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  #cardPhoto {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card-center {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .library-name {
+    font-size: 12px;
+    bottom: 8px;
+    right: 8px;
+  }
+
+  .library-icon {
+    width: 14px !important;
+    height: 14px !important;
+    bottom: 8px;
+    left: 8px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .form-card {
+    width: 90%;
+  }
+
+  .library-card {
+    width: 90%;
+  }
+}
